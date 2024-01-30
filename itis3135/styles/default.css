@@ -46,3 +46,10 @@ table tr:nth-child(odd){
 table tr:nth-child(even){
     background-color: #d9ffbd;
 }
+/* Form */
+form{
+    background-color: #47256e;
+}
+label, legend{
+    color: #fee2f5;
+}
