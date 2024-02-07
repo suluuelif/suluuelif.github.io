@@ -4,3 +4,10 @@ body{
 h1{
     font-family:'AmstelvarAlpha';
 }
+a:visited{
+    text-decoration: none;
+    decoration: none;
+}
+a{
+    color: orangered;
+}

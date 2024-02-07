@@ -4,15 +4,11 @@ h1, h2, p{
 
 }
 .center{
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+    margin: auto;
     width: 50%;
 }
-.navbar{
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+.navbar a{
+    margin: auto;
 }
 h1{
     color: #6a5acd;
@@ -22,7 +18,12 @@ p{
 }
 body{
     background-color: #fee2f5;
+    margin: auto;
 }
+footer img{
+    margin: auto;
+}
+
 /* Table Design */
 table caption{
     color: #ff8347;
