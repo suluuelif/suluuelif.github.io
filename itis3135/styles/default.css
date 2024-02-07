@@ -53,3 +53,17 @@ form{
 label, legend{
     color: #fee2f5;
 }
+a:visited{
+    text-decoration: none;
+    decoration: none;
+}
+a{
+    color: orangered;
+}
+
+#useless :nth-of-child(3) {
+    text-align: center;
+    font: comic-sans;
+    font-size: large;
+
+}
