@@ -1,5 +1,5 @@
 
-body, h1, h2, p, nav{
+body, h1, h2, h3, p, nav{
    text-align: center;
 
 }
@@ -14,6 +14,7 @@ header > .navbar a{
 }
 h1{
     color: #6a5acd;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 p{
    color: #d44ea0;
@@ -24,6 +25,9 @@ body{
 }
 footer img{
     margin: auto;
+}
+h3{
+    color: #fdb0c0;
 }
 
 /* Table Design */
@@ -80,4 +84,12 @@ footer > a{
     padding: 15px;
     box-sizing: border-box;
 }
+li{
+    list-style-type: "💞 ";
+    text-align: left;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #702963;
+
+}
+
 
