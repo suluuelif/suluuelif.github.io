@@ -94,12 +94,21 @@ footer > a{
     padding: 15px;
     box-sizing: border-box;
 }
-li{
+ul li{
     list-style-type: "💞 ";
     text-align: left;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: #702963;
 
+}
+ol li{
+    counter-increment: item;
+    margin-bottom: 10px;
+    position: relative;
+    text-align: left;
+    display: list-item;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #702963;
 }
 
 
