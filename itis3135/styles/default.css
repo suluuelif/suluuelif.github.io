@@ -9,7 +9,7 @@ h1, h2, p{
 }
 .navbar a{
     padding: 7% 7% 7% 7%;
-    align: center;
+    text-align: center;
 
 }
 h1{
