@@ -1,5 +1,5 @@
 
-h1, h2, p{
+body, h1, h2, p, nav{
    text-align: center;
 
 }
@@ -7,9 +7,9 @@ h1, h2, p{
     margin: auto;
     width: 50%;
 }
-.navbar a{
-    padding: 7% 7% 7% 7%;
-    text-align: center;
+header > .navbar a{
+    padding: 15px;
+    align-items: center;
 
 }
 h1{
@@ -73,3 +73,11 @@ a{
     font-size: large;
 
 }
+footer > .navbar a{
+padding: 15px;
+}
+footer > a{
+    padding: 15px;
+    box-sizing: border-box;
+}
+
