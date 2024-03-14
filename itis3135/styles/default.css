@@ -16,6 +16,7 @@ h1{
     color: #6a5acd;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
 p{
    color: #d44ea0;
 }
@@ -47,8 +48,8 @@ tr{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 h2{
-    color: #ff686e;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    color: hotpink;
+    font-family: Verdana, Geneva, Tahoma, serif; 
 }
 table tr:nth-child(odd){
     background-color: #d9ff6e;
