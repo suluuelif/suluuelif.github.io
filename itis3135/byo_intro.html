@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELIF SU's EERIE SEAL || ITIS 3135 || BYO Intro</title>
+    <link rel="stylesheet" href="styles/default.css">
+</head>
+<body>
+    <header>
+        <h1>ELIF SU's EERIE SEAL || ITIS 3135 || BYO Intro</h1>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <h2>Activity #6 - BYO - Introduction Page Form</h2> 
+        <h3 style="color: blueviolet; font-family: Georgia, 'Times New Roman', Times, serif;">Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
+        <form>
+            <fieldset>
+                <label for="name">Name: <input required type="text" placeholder="Eerie Seal"></label>
+                <label for="mascot">Mascot:<input required type="text" placeholder="Seal"></label>
+                <label for="image">Image: <input required type="file"></label>
+                <label for="personal">Personal Background: <input required  type="text"></label>
+                <label for="professional">Professional Background: <input required  type="text"></label>
+                <label for="academic">Academic Background: <input required  type="text"></label>
+                <label for="web">Web Development Background: <input type="text"></label>
+                <label for="environment">Primary Computer Platform: <input type="text"></label>
+                <label for="course">Courses Currently Taking <button id="addCourse">Add Course</button></label>
+                <label for="funny">Funny Thing: <input type="text"></label>
+                <label for="Other">Anything Else:</label>
+            </fieldset>
+            
+            <input type="reset" value="Reset">
+        <input type="submit" value="Submit">
+        </form>
+
+        <script src="scripts/survey.js"></script>
+
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script>
+        document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+             document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+     </script>
+     <script src="scripts/HTMLInclude.min.js"></script>
+     
+</body>
+</html>

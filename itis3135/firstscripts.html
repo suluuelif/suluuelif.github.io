@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELIF SU's EERIE SEAL || ITIS 3135 || First Scripts</title>
+    <link rel="stylesheet" href="styles/default.css">
+</head>
+<body>
+    <header>
+        <h1>ELIF SU's EERIE SEAL || ITIS 3135 || First Scripts</h1>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <h2>First Scripts</h2> 
+        <h3 
+        style="
+        color: #5B62A5;
+        font-weight: 900;"
+        id="date"></h3>
+
+        <p>Hi! What is your name?</p>
+        <input id="userName">
+        <button type="button" onclick="getToKnow()">Submit</button>
+        <p id="greeting"></p>
+
+
+        <p>How are you feeling today? (rate it on a scale of 1-10)</p>
+        <input id="number">
+        <button type="button" onclick="moodRate()">Submit</button>
+        <p id="moodrating"></p>
+
+        
+        <p>What is you favorite number from 1-10</p>
+        <input type="number" id="favoriteNumber" >
+        <button onclick="findPolygon()">Submit</button>
+        <p id="yourPolygon"></p>
+
+        <!-- <p>What is you favorite number from 1-10</p>
+        <input id="favoriteNumber">
+        <button type="button" onclick="polygon()">Submit</button>
+        <p id="yourPolygon"></p> -->
+
+        
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script>
+        document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+             document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+     </script>
+     <script src="scripts/HTMLInclude.min.js"></script>
+     <script src="scripts/defaultscripts.js"></script>
+     
+</body>
+</html>
+
