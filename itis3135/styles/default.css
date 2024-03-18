@@ -112,4 +112,6 @@ ol li{
     color: #702963;
 }
 
-
+.hidden {
+    display: none;
+  }
