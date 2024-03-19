@@ -1,3 +1,28 @@
+/* for mobile devices */
+@media screen and ( min-width: 370px ) and ( max-width: 600px ) {
+    #colorbox {
+        background-color:red;
+    }
+}
+/* for tablet  */
+@media screen and ( min-width: 601px ) and ( max-width: 980px )  {
+    #colorbox {
+        background-color:orange;
+    }
+}
+/* for small screens/laptops */
+@media screen and ( min-width: 981px ) and ( max-width: 1400px ) {
+    #colorbox {
+        background-color:yellow;
+    }
+}
+
+main { 
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+
+}
 
 body, h1, h2, h3, p, nav{
    text-align: center;
