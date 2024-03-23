@@ -1,5 +1,5 @@
-const addCourseBtn = document.getElementById(add-course-button);
-const courseForm = document.getElementById(course-form);
+const addCourseBtn = document.getElementById("add-course-button");
+const courseForm = document.getElementById("course-form");
 
 addCourseBtn.addEventListener("click", () =>
 courseForm.classList.toggle("hidden")

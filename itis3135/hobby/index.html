@@ -3,54 +3,340 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ELIF SU's EERIE SEAL || ITIS 3135 || Homepage</title>
-   
+    <title>Hobby</title>
+   <!-- CSS -->
+<style>
+figure img{
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+}
+figcaption{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    color: #138123;
+}
+h1, h2, h3{
+    color: #06b234;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+ a, nav, p{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+ul li{
+    list-style-type: "🍴";
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #138123;
+}
+img, button {
+    display: block;
+    margin: auto;
+}
+
+body{
+    background-color: #E6FFCC;
+}
+
+p, h1, h2, h3{
+    color: #085a08;
+}
+a:visited{
+    text-decoration: none;
+    
+}
+
+a{
+   padding: 10px;
+   color: #004d00;
+   text-decoration: none;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.section {
+    display: none;
+    margin-bottom: 20px;
+}
+
+.section.active {
+    display: block;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    cursor: pointer;
+} 
+button {
+    background-color: #8aeea5;
+    color: #2d4931;
+    align-items: center;
+    padding: 10px 20px;
+    margin: auto;
+    border-radius: 5px;
+    
+    
+}
+.result {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #009929;
+}
+table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #8aeea5;
+            color: #009929;
+        }
+        th {
+            background-color: #8aeea5;
+        }
+</style>
+<!-- JAVASCRIPT -->
+    <script>
+
+document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll(".section");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function(event) {
+            event.preventDefault();
+            const targetId = this.getAttribute("href");
+            const targetSection = document.querySelector(targetId);
+
+            sections.forEach(section => {
+                section.classList.remove("active");
+            });
+
+            targetSection.classList.add("active");
+        });
+    });
+});
+
+// QUIZ
+
+function showResult(isCookingHobby) {
+    var resultElement = document.getElementById("result");
+    if (isCookingHobby) {
+        resultElement.innerText = "Cooking might be a hobby for you!";
+    } else {
+        resultElement.innerText = "You might just be trying to get by sorry:(";
+    }
+}
+    </script>
     
 </head>
 <body>
     <header>
-        <h1>ELIF SU's EERIE SEAL || ITIS 3135 || Hobby</h1>
-        <nav class="navbar background">
-            <div style="
-            color: brown;
-            font-size: large;
-            font-family: cursive;
-            align-items: center;
-            ">
-            <em>Eerie Seal; Seal The Deal</em>
-            </div>
-       
-            <a href="./">Homepage</a> 
-            ||
-            <a href="../introduction.html">Introduction</a>
-            ||
-            <a href="../contract.html">Contract</a>
-            ||
-            <a href="../tables.html">Tables</a>
-            ||
-            <a href="../forms.html">Forms</a>
-            ||
-            <a href="../website_evaluations.html">Website Evaluations</a>
-            ||
-            <a href="../about.html">About</a>
-            ||
-            <a href="../firstscripts.html">First Scripts</a>
-            ||
-            <a href="../byo_intro.html">BYO Intro</a>
-            ||
+        <h1>Cooking</h1>
+        <nav>
             
+                <a href="#section1" class="nav-link">Homepage</a>
+                🔪
+                <a href="#section2" class="nav-link">About Me</a>
+                🔪
+                <a href="#section3" class="nav-link">When</a>
+                🔪
+                <a href="#section4" class="nav-link">Where</a>
+                🔪
+                <a href="#section5" class="nav-link">How</a>
+                🔪
+                <a href="#section6" class="nav-link">Why</a>
+                🔪
+                <a href="#section7" class="nav-link">AI Prompts</a>
            
-            
-    </nav>
+        </nav>
     </header>
     <main>
-        <h2> Welcome to Su Designs</h2> 
-        <p> This is all the content for my ITIS 3135 class</p>
+
+    
+    
+        <div class="container">
+            <!-- SECTION 1 HOMEPAGE-->
+            <div class="section" id="section1">
+                <h2>Homepage</h2>
+                <figure>
+                    <img src="/hobby/images/whyCook.jpg" alt="Chef Cooking" />
+                    <figcaption><i>MidJourney Prompt:"why do people cook?"</i></figcaption>
+                  </figure>
+                <p>Cooking is one of those hobbies where an average person should at least be familair with it for survival. However, people who can cook and like cooking but also pursue it as a hobby have a better understanding of it beyond survival. In this page we are going to be exploring what is cooking as a hobby. What are some measures cooking enthusisast take. What are some tools you can use? What are musts of this hobby and most importantly why is it a hobby to begin with? So let's quiz to see if cooking is a hobby for you.</p>
+                                <!-- QUIZ -->
+                <div class="quiz-container">
+                    <h3>Let's determine what cooking is to you!</h3>
+                    <p>Would you go out of your way to prepare for a cooking sesh, make a trip to the grocery get tools for a specific dish and get excited for it?</p>
+                    <div class="options">
+                        <button onclick="showResult(true)">Yes!</button>
+                        <button onclick="showResult(false)">No I would never</button>
+                    </div>
+                    <div class="result" id="result"></div>
+                </div>
+            </div>
+           <!-- SECTION 2 ABOUT ME-->
+            <div class="section" id="section2">
+                <h2>About Me</h2>
+                <figure>
+                    <img src="/hobby/images/womenCooking.jpg" alt="Women Cooking Hand" />
+                    <figcaption><i>MidJourney Prompt:"a woman cooking"</i></figcaption>
+                  </figure>
+                  
+                <p>
+                    My name is Elif and I am a self claimed cooking enthusisast. I believe I do it as a hobby and I created this page to talk more about my hobby and other aspects of it. Some would think I did it to complete my Midterm project for the class ITSC 3130 which also happens to be 15% of my grade, however I am just very passionate about website and my hobby. You might think <em>'this is completely useless'</em> and you might be right but I am learning how to make a freaking website and that all that is. Nothing is really that deep, neither is this paragraph, but that is not the point go through the website and learn a thing or two and stop complaining. I think this is enough. okay bye! 
+                </p>
+                <h3>How I started and such</h3>
+                <p>
+                So I have been cooking as a little kid and always enjoyed it from all I can remember. I once <em>allegedly</em> went up to a street vendor, that makes this sort of bread that is popular in Turkey, and told her I can do it better as a 3-year-old. Later on when I was 11-12 I was making desserts and loved doing it. By the time I was 15 I could cook a whole 5 course meal for my family no problem. I like learning about different cultures, foods, and how they invented dishes. I think it is pretty fascinating to see how people, own their own, came up with cooking techniques. My grandma, who hasn't been past elementary school, could tell you how to make yogurt using chickpeas. It is not because she knows about the science behind chickpea water, aquapahaba, and the combination of milk that results in fermentation. People have tried and curated recipes based ontheir experiences or stumbled upon some recipes that are now being studied in a fancy French school with a fancy major name. That is why I enjoy learning about it as everything else cooking is also very white supremacist and revolves around Italian cuisine for some reason and that is why it is only a hobby to me.
+                </p>
+            </div>
+
+            <!-- SECTION 3 WHEN-->
+            <div class="section" id="section3">
+                <h2>When</h2>
+                <figure>
+                    <img src="/hobby/images/produce.jpg" alt="Produce" />
+                    <figcaption><i>MidJourney Prompt:"seasonal produce"</i></figcaption>
+                  </figure>
+                <p>Cooking does not have a season but ingredients do! It is essential to have good ingredients while making a dish. That is why you should kow what produc should be bought when. A good piece of produe can make or break a dish!</p>
+                <h3>Here are some produce and its seasons</h3>
+                <table>
+                    <tr>
+                      <th>Produce</th>
+                      <th>Season</th>
+                    </tr>
+                    <tr>
+                      <td>Apples</td>
+                      <td>Fall</td>
+                    </tr>
+                    <tr>
+                      <td>Strawberries</td>
+                      <td>Spring, Summer</td>
+                    </tr>
+                    <tr>
+                      <td>Broccoli</td>
+                      <td>Fall, Winter, Spring</td>
+                    </tr>
+                    <tr>
+                      <td>Tomatoes</td>
+                      <td>Summer</td>
+                    </tr>
+                    <tr>
+                      <td>Carrots</td>
+                      <td>Fall, Winter, Spring</td>
+                    </tr>
+                  </table>
+            </div>
 
 
+            <!-- SECTION 4 WHERE -->
+            <div class="section" id="section4">
+                <h2>Where</h2>
+                <figure>
+                    <img src="/hobby/images/cookingOutdoors.jpg" alt="Outdoor" />
+                    <figcaption><i>MidJourney Prompt:"cooking Outdoors"</i></figcaption>
+                  </figure>
+                <p>You can cook anywhere! As mentioned in the first page cooking is a need for all. Whether you get another person to do it for you, something needs to be cooked, yes this includes raw vegans as well. Preparing a dish can be done anywhere! What are some exotic places we can cook at though? </p>
+                <table>
+                    <tr>
+                      <th>Place</th>
+                      <th>How</th>
+                    </tr>
+                    <tr>
+                      <td>Outdoors</td>
+                      <td>Barbecue, Bonfire, portable stove</td>
+                    </tr>
+                    <tr>
+                      <td>Home</td>
+                      <td>Kitchen</td>
+                    </tr>
+                    <tr>
+                      <td>Vehicles</td>
+                      <td>Food Trucks, Car Stoves</td>
+                    </tr>
+                    <tr>
+                      <td>Community</td>
+                      <td>Community kitchens</td>
+                    </tr>
+                    <tr>
+                      <td>Vacation</td>
+                      <td>Hotel Rooms, Cruise, AirBnB, Rentals.</td>
+                    </tr>
+                  </table>
+            </div>
 
+            <!-- SECTION 5 -->
+            <div class="section" id="section5">
+                <h2>How</h2>
+                <figure>
+                    <img src="/hobby/images/crazyMan.jpg" alt="Crazy Man" />
+                    <figcaption><i>MidJourney Prompt:"how do people cook?"</i></figcaption>
+                  </figure>
+                <p>There various ways to cook. How you do the cooking differs depednig on what you are cooking. There are many way to cook and they are called cooking techniques. These techniques do not have to be fancy nor do you have to be a professional chef to master them. Most people tend to struggle with how long to cook their meat as it is very dangerous to eat uncooked meat, dairy, or poultry. Here is a table for how long you have to cook various types of meat that are risky for consumption</p>
+                <table>
+                    <tr>
+                      <th>Food</th>
+                      <th>Temperature for Safe Consumption</th>
+                    </tr>
+                    <tr>
+                      <td>Beef, Pork, Veal Lamb</td>
+                      <td> 160°F (71°C)</td>
+                    </tr>
+                    <tr>
+                      <td>Ground Meat</td>
+                      <td> 160°F (71°C)</td>
+                    </tr>
+                    <tr>
+                      <td>Poultry(Turkey, Chicken, Duck)</td>
+                      <td>Food Trucks, Car Stoves</td>
+                    </tr>
+                    <tr>
+                      <td>Seafood</td>
+                      <td>145°F (63°C)</td>
+                    </tr>
+                    <tr>
+                      <td>Vacation</td>
+                      <td>Hotel Rooms, Cruise, AirBnB, Rentals.</td>
+                    </tr>
+                  </table>
+            </div>
 
+            <!-- SECTION 6 -->
+            <div class="section" id="section6">
+                <h2>Why</h2>
+                <figure>
+                    <img src="/hobby/images/culturalFood.jpg" alt="Cultural Food" />
+                    <figcaption><i>MidJourney Prompt:"food from different cultures"</i></figcaption>
+                  </figure>
+                <p>Cooking can be done for necessity for survival. As as humans or any species has to get fuel somehow. For some organisms, plants, sunglight is enough for fuel and that is their food. Humans eat for survival but that is not the only reason we cook. Cooking is done for cultural reasons, religion and every aspect of our lives. Cooking brings people together and gives them a sense of belonging and nostalgia. Cooking can also be a hobby. People cook as a hobby they gather recipes or curate them on  their own. Cooking requires science and quite a bit of chemistry. People research and find ways to cook food properly for the most optimal falvour profile.</p>
+                <p>Cooking is a culture and that is why it is also a hobby. Figuring out what people eat and why they do is also anthropology on its own. Cooking is a form of art to many from curating recipes to preparing plates. That is why people cook as a hobby. It is art, history and scinece. These are all hobbies that can be translated as a form of cooking. </p>
+            </div>
 
+            <!-- SECTION 7 AI PROMPTS-->
+            <div class="section" id="section7">
+                <h2>AI Prompts</h2>
+                <p>I utilized<a href="https://chat.openai.com">ChatGPT</a>in the making of this website here is a list of all the prompts I have used; </p>
+                <ul>
+                    <li>how to make a section appear only when it is clicked  in javascript</li>
+                    <li>how to get rid of underlining on links css</li>
+                    <li>how to make images in line next to one another</li>
+                    <li>what should I target in css to center those items(put in a section of my code previously)</li>
+                    <li>how to change bullets in css</li>
+                    <li>create a quiz that gives you a result based on answers</li>
+                    <li>how to change the figcaption font</li>
+                    <li> how do I target figcaption and change the size of the image to fit</li>
+                </ul>
+            </div>
+        </div>
+        
 
 
 
@@ -65,21 +351,7 @@
 
 
     <footer>
-        <nav class="footer-nav">
-            <a href="https://webpages.charlotte.edu/esu3/">CLT Webspace</a>
-            || 
-            <a href="https://github.com/suluuelif">Github</a>
-            ||
-            <a href="https://suluuelif.github.io/itis3135">Github Course Page</a>
-            ||
-            <a href="https://www.freecodecamp.org/suluelif">freecodecamp</a> 
-            ||
-            <a href="https://www.codecademy.com/profiles/suluelif">codeacademy</a>
-            ||
-            <a href="https://www.linkedin.com/in/elif-su/">LinkedIn</a>
-            ||
-            <a href="https://github.com/suluuelif/suluuelif.github.io">Github.io</a>
-        </nav>
+        
         <p>Designed by <a href="sudesigns.org/">Su Designs</a>, Certified<a href="https://www.freecodecamp.org/certification/suluelif/responsive-web-design"> RWD</a></p>
         <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
             <img style="border:0;width:88px;height:31px" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
@@ -87,9 +359,7 @@
            <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
             <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" class="center
             ">
-             </a>
-             <button type = "button" onclick = 	"document.querySelectorAll('link[rel=stylesheet]').forEach(function(e)	{e.setAttribute('href', '');});">No CSS</button>
-        
+            
     </footer>
     <script>
         document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
