@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Su Designs</title>
+
+    <style>
+        /* COLOR SCHEMES
+        https://coolors.co/eccbd9-e1eff6-97d2fb-83bcff-80ffe8
+        https://coolors.co/eaefbd-c9e3ac-90be6d-ea9010-37371f
+         */
+
+       /* for mobile devices */
+@media screen and ( min-width: 370px ) and ( max-width: 600px ) {
+    #colorbox {
+        background-color:red;
+    }
+}
+/* for tablet  */
+@media screen and ( min-width: 601px ) and ( max-width: 980px )  {
+    #colorbox {
+        background-color:orange;
+    }
+}
+/* for small screens/laptops */
+@media screen and ( min-width: 981px ) and ( max-width: 1400px ) {
+    #colorbox {
+        background-color:yellow;
+    }
+}
+body, h1, h2, h3, p, nav{
+    text-align: center;
+ 
+ }
+ h1{
+    color: #90BE6D;
+ }
+ h2{
+    color: #C9E3AC;
+ }
+ h3{
+    color: #97D2FB;
+ }
+ p{
+    color: #EA9010;
+
+ }
+ figure img{
+        max-width: 15%;
+        margin: 0;
+        padding: 0;
+}
+figcaption{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    color: #138123;
+}
+ .center{
+     margin: auto;
+     width: 50%;
+ }
+
+main { 
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+
+}
+body{
+    background-color: #E1EFF6;
+}
+h1{
+    font-family:'AmstelvarAlpha';
+}
+a:visited{
+    text-decoration: none;
+    decoration: none;
+}
+a{
+    color: #37371F;
+}
+ul li{
+    list-style-type: "🦭";
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #138123;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SuDesigns.org</h1> 
+        <figure>
+            <img src="images/waterDrop.png" alt="Chef Cooking" />
+            <figcaption><i>Company Logo</i></figcaption>
+          </figure>
+        <div data-include="../components/header.html"></div>
+    </header>
+    <main>
+    <h2>Welcome to Su Designs</h2>
+    <p>
+        Su designs is a company dedicated to creating vacuum seals of all kinds. 
+    </p>
+   <ul>
+    <li>We are the best in this business</li>
+    <li>there are no other companies that specilize in this field</li>
+    <li>We are known for our great treatment for our customers and workers</li>
+    <li>Our seals are cerrified break resistant</li>
+    <li>Always on time with orders</li>
+    <li>Due to our small clientele we treat all our customers with care and attention</li>
+   </ul>
+   <p>We would like to seal all your seal deals with our amazing seals. Please prefer Su Designs for all your seal inqiries, Eerie Seal; Seal the Deal. </p>
+    
+</main>
+<footer>
+    <nav class="footer-nav">
+        <a href="https://webpages.charlotte.edu/esu3/">CLT Webspace</a>
+        || 
+        <a href="https://github.com/suluuelif">Github</a>
+        ||
+        <a href="https://suluuelif.github.io/itis3135">Github Course Page</a>
+        ||
+        <a href="https://www.freecodecamp.org/suluelif">freecodecamp</a> 
+        ||
+        <a href="https://www.codecademy.com/profiles/suluelif">codeacademy</a>
+        ||
+        <a href="https://www.linkedin.com/in/elif-su/">LinkedIn</a>
+        ||
+        <a href="https://github.com/suluuelif/suluuelif.github.io">Github.io</a>
+    </nav>
+    Certified<a href="https://www.freecodecamp.org/certification/suluelif/responsive-web-design"> RWD</a></p>
+    <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
+        <img style="border:0;width:88px;height:31px" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
+       </a>
+       <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
+        <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" class="center
+        ">
+         </a>
+         <button type = "button" onclick = 	"document.querySelectorAll('link[rel=stylesheet]').forEach(function(e)	{e.setAttribute('href', '');});">No CSS</button>
+    
+</footer>
+<script>
+    document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+         document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+ </script>
+ <script src="../scripts/HTMLInclude.min.js"></script>
+ 
+</body>
+</html>
