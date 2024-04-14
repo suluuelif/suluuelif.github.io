@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Project Board</title>
+    <link rel="stylesheet" href="/styles/project.css">
+    <script src="https://farawayforests.com/cdn/accumulus/accumulus.min.js"></script>
+    <script src="scripts/project.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Turkish Student Association at Charlotte</h1>
+        <nav>
+            <a href="./">About Us</a> 
+            <a href="board.html">Club Board</a>
+            <a href="member.html">Members</a>
+            <a href="language.html">Learn Turkish</a>
+            <a href="culture.html">More</a>
+        </nav>
+    </header>
+    <main>
+       <h2>More About Our Board Members</h2>
+
+    </main>
+<footer>
+    <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
+        <img style="border:0;width:88px;height:31px" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
+    </a>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
+        <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" class="center">
+    </a>
+    <a href="https://wave.webaim.org/report#/" id="validation_link_disability"> <img style="border:0;width:88px;height:31px" src="/images/button_validation_wcag-2.png" alt="Valid Disabiliy/Accessibility Design!">  
+    </a>
+     <button type = "button" onclick = 	"document.querySelectorAll('link[rel=stylesheet]').forEach(function(e)	{e.setAttribute('href', '');});">No CSS</button>
+
+</footer>
+    <script>
+        document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+        document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+        document.getElementById("validation_link_disability").setAttribute("href","https://wave.webaim.org/report#/" + location.href);
+     </script>
+     <script src="scripts/HTMLInclude.min.js"></script>
+     
+</body>
+</html>
