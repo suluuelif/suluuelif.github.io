@@ -1,20 +1,12 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const introForm = document.getElementById('intro-form');
-    const addCourseButton = document.getElementById('add-course-button');
-    const courseList = document.getElementById('course-list');
-    const courseFormTemplate = document.getElementById('course-form-template');
+const coursesInput = document.getElementById("coursesInput");
+const addCoursesBtn = document.getElementById("addCoursesButton");
+const coursesTaking = document.getElementById("coursesTaking");
     const submitBtn = document.querySelector('input[type="submit"]');
     const resetBtn = document.querySelector('input[type="reset"]');
+    var count = 0;
 
-    addCourseButton.addEventListener('click', function() {
-        addCourseTextBox();
-    });
-
-    courseList.addEventListener('click', function(event) {
-        if (event.target && event.target.className === 'delete-course-button') {
-            event.target.parentElement.remove();
-        }
-    });
+    
+    
 
     introForm.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -25,6 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault();
         resetForm();
     });
+    
+
 
     function addCourseTextBox() {
         const newCourseForm = courseFormTemplate.cloneNode(true);
@@ -32,6 +26,50 @@ document.addEventListener('DOMContentLoaded', function() {
         courseList.insertBefore(newCourseForm, addCourseButton);
     }
 
+    function addCourseInput() {
+        instantiateDelete();
+        var newInput = document.createElement('input');
+        newInput.type = 'text';
+        newInput.id = 'coursesUserTaken';
+        newInput.className = 'coursesUserTaken';
+        coursesInput.appendChild(newInput);
+        var lineBreak = document.createElement('br');
+        coursesInput.appendChild(lineBreak);
+        count++;
+    }
+    function displayCourses() {
+        let coursesListHTML = ''; 
+        for(let x = 0; x < coursesInput.children.length; x++) {
+            if(coursesInput.children[x].value){
+                coursesListHTML += `<li>${coursesInput.children[x].value}</li>`;
+            }
+        }
+        return coursesListHTML;
+    }
+    function instantiateDelete() {
+        if (!document.getElementById('deleteButton') && count >= 1) {
+            var deleteButton = document.createElement('input');
+            deleteButton.type = 'button';
+            deleteButton.id = 'deleteButton';
+            deleteButton.className = 'deleteButton';
+            deleteButton.value = 'Delete';
+            coursesButton.appendChild(deleteButton);
+            var spacing = document.createElement('br');
+            coursesButton.appendChild(spacing);
+    
+            deleteButton.addEventListener("click", () => {
+                if (coursesInput.lastElementChild) {
+                    coursesInput.removeChild(coursesInput.lastElementChild);
+                    coursesInput.removeChild(coursesInput.lastElementChild);
+                    count--; 
+                    if (count === 0) {
+                        deleteButton.remove();
+                    }
+                }
+            });
+        }    
+    }
+    
     function submitForm() {
         const formData = {
             name: document.getElementById('name').value,

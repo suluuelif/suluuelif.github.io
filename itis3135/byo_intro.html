@@ -15,32 +15,46 @@
     </header>
     <main>
         <h2>Activity #6 - BYO - Introduction Page Form</h2> 
-        <h3 style="color: blueviolet; font-family: Georgia, 'Times New Roman', Times, serif;">Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
+        <h3 style="color: blueviolet; font-family: Georgia, 'Times New Roman', Times, serif;">
+            Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
         <form>
            <fieldset>
-                <label for="name">Name: <input required type="text" placeholder="Eerie Seal"></label>
-                <label for="mascot">Mascot:<input required type="text" placeholder="Seal"></label>
-                <label for="image">Image: <input  type="file"></label>
-                <label for="personal">Personal Background: <input required  type="text"></label>
-                <label for="professional">Professional Background: <input required  type="text"></label>
-                <label for="academic">Academic Background: <input required  type="text"></label>
-                <label for="web">Web Development Background: <input type="text"></label>
-                <label for="environment">Primary Computer Platform: <input required type="text"></label>
+                <label for="name">Name: 
+                    <input id="name" type="text" placeholder="Eerie Seal" required ></label>
+                <label for="mascot">Mascot:
+                    <input id="mascot"  type="text" placeholder="Seal" required></label>
+                <label for="image">Image: 
+                    <input  id="image"type="file" accept="image/png, image/jpeg"></label>
+                <label for="personal">Personal Background: 
+                    <input id="personal" required  type="text"></label>
+                <label for="professional">Professional Background: 
+                    <input required  id="professional" type="text"></label>
+                <label for="academic">Academic Background: 
+                    <input required  id="academic" type="text"></label>
+                <label for="web">Web Development Background: 
+                    <input type="text"></label>
+                <label for="environment">Primary Computer Platform: 
+                    <input required type="text"></label>
 
-                <div  class="course-list" id="course-list">
-                <button id="add-course-button">Add Course</button>
+                <label for="coursesInput">Current Courses</label>
+                <div  class="coursesInput">
+                    <input type="text" id="coursesUserTaking" class="coursesUserTaking">
+                    <br>
+                </div>
+            <div id="addCourseButton">
                
-                Courses Currently Taking
+                <input type="button" id="coursesTaking" value="Add Course">
+    
                     
-                    <form class="course-form hidden" id="course-form">
-                       <label for="course-name">Course Name <input type="text"></label>
-                       <label for="course-description">Description <input type="text" name="course-description" id="course-description"></label>
-                    </form>
+                    <!-- <form class="course-form hidden" id="course-form">
+                       <label for="course-name">Course Name 
+                        <input type="text"></label>
+                       <label for="course-description">Description 
+                        <input type="text" name="course-description" id="course-description"></label>
+                    </form> -->
                
             </div>
-            <div>
-
-            </div>
+            
                 <label for="funny">Funny Thing: <input required type="text"></label>
                 <label for="other">Anything Else: <input type="text"></label>
                 <label for="agree">"I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available."<input required type="checkbox"></label>
