@@ -156,3 +156,7 @@ figcaption{
     margin: auto;
     overflow: hidden;
 }
+
+.container {
+    position: relative;
+  }
