@@ -145,3 +145,14 @@ ol li{
     margin: 0;
     padding: 0;
 }
+figcaption{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    color: #c057a5;
+}
+.slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
