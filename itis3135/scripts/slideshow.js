@@ -1,25 +1,30 @@
 let slideIndex = 1;
 showSlides(slideIndex);
 
+
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
+
 
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
 function showSlides(n) {
-  var i;
-  var slides = $(".slides"); 
-  var dots = $(".demo"); 
+  let i;
+  let slides = document.getElementsByClassName("slides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
-  
-  slides.hide(); 
-  dots.removeClass("active");
-
-  slides.eq(slideIndex - 1).fadeIn(600); 
-  dots.eq(slideIndex - 1).addClass("active"); 
-  captionText.html(dots.eq(slideIndex - 1).attr("alt")); 
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
 }
