@@ -62,3 +62,14 @@ body, h1, h2, h3, p, nav{
  footer > .navbar a{
     padding: 15px;
     }
+
+    .slideshow-container {
+        position: relative;
+        max-width: 800px;
+        margin: auto;
+        overflow: hidden;
+    }
+    
+    .container {
+        position: relative;
+      }
