@@ -1,12 +1,6 @@
-const coursesInput = document.getElementById("coursesInput");
-const addCoursesBtn = document.getElementById("addCoursesButton");
-const coursesTaking = document.getElementById("coursesTaking");
     const submitBtn = document.querySelector('input[type="submit"]');
     const resetBtn = document.querySelector('input[type="reset"]');
     var count = 0;
-
-    
-    
 
     introForm.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -17,58 +11,15 @@ const coursesTaking = document.getElementById("coursesTaking");
         event.preventDefault();
         resetForm();
     });
-    
-
-
-    function addCourseTextBox() {
-        const newCourseForm = courseFormTemplate.cloneNode(true);
-        newCourseForm.classList.remove('hidden');
-        courseList.insertBefore(newCourseForm, addCourseButton);
-    }
-
-    function addCourseInput() {
-        instantiateDelete();
-        var newInput = document.createElement('input');
-        newInput.type = 'text';
-        newInput.id = 'coursesUserTaken';
-        newInput.className = 'coursesUserTaken';
-        coursesInput.appendChild(newInput);
-        var lineBreak = document.createElement('br');
-        coursesInput.appendChild(lineBreak);
-        count++;
-    }
-    function displayCourses() {
-        let coursesListHTML = ''; 
-        for(let x = 0; x < coursesInput.children.length; x++) {
-            if(coursesInput.children[x].value){
-                coursesListHTML += `<li>${coursesInput.children[x].value}</li>`;
-            }
+    function resetForm() {
+        introForm.reset();
+        const displayedData = document.querySelector('div:not(#course-list)');
+        if (displayedData) {
+            displayedData.remove();
         }
-        return coursesListHTML;
+        resetBtn.style.display = 'none';
     }
-    function instantiateDelete() {
-        if (!document.getElementById('deleteButton') && count >= 1) {
-            var deleteButton = document.createElement('input');
-            deleteButton.type = 'button';
-            deleteButton.id = 'deleteButton';
-            deleteButton.className = 'deleteButton';
-            deleteButton.value = 'Delete';
-            coursesButton.appendChild(deleteButton);
-            var spacing = document.createElement('br');
-            coursesButton.appendChild(spacing);
-    
-            deleteButton.addEventListener("click", () => {
-                if (coursesInput.lastElementChild) {
-                    coursesInput.removeChild(coursesInput.lastElementChild);
-                    coursesInput.removeChild(coursesInput.lastElementChild);
-                    count--; 
-                    if (count === 0) {
-                        deleteButton.remove();
-                    }
-                }
-            });
-        }    
-    }
+
     
     function submitForm() {
         const formData = {
@@ -86,45 +37,57 @@ const coursesTaking = document.getElementById("coursesTaking");
             courses: []
         };
 
-        const courseForms = document.querySelectorAll('.course-form:not(.hidden)');
-        courseForms.forEach(form => {
-            const courseName = form.querySelector('.course-name').value;
-            const courseDescription = form.querySelector('.course-description').value;
-            formData.courses.push({ name: courseName, description: courseDescription });
-        });
-
-        // Display gathered data instead of the form
-        displayFormData(formData);
     }
 
-    function displayFormData(formData) {
-        const displayDiv = document.createElement('div');
-        displayDiv.innerHTML = `
-            <h2>${formData.name}</h2>
-            <p><strong>Mascot:</strong> ${formData.mascot}</p>
-            <p><strong>Personal Background:</strong> ${formData.personal}</p>
-            <p><strong>Professional Background:</strong> ${formData.professional}</p>
-            <p><strong>Academic Background:</strong> ${formData.academic}</p>
-            <p><strong>Web Development Background:</strong> ${formData.web}</p>
-            <p><strong>Primary Computer Platform:</strong> ${formData.environment}</p>
-            <p><strong>Funny Thing:</strong> ${formData.funny}</p>
-            <p><strong>Anything Else:</strong> ${formData.other}</p>
-            <p><strong>Courses Currently Taking:</strong></p>
-            <ul>
-                ${formData.courses.map(course => `<li>${course.name} - ${course.description}</li>`).join('')}
-            </ul>
-            <p><strong>Agree:</strong> ${formData.agree ? 'Yes' : 'No'}</p>
-        `;
-        introForm.replaceWith(displayDiv);
-        resetBtn.style.display = 'block';
-    }
+const courseInfo = document.getElementById("courseInfo");
+const currentCourseBtn = document.getElementById("currentCourseBtn");
+const currentCourses = document.getElementById("currentCourses");
+var count = 0;
 
-    function resetForm() {
-        introForm.reset();
-        const displayedData = document.querySelector('div:not(#course-list)');
-        if (displayedData) {
-            displayedData.remove();
+currentCourses.addEventListener("click", addCourseInfo); 
+
+function addCourseInfo() {
+    instantiateDelete();
+    var newInput = document.createElement('input');
+    newInput.type = 'text';
+    newInput.id = 'newCourse';
+    newInput.className = 'newCourse';
+    courseInfo.appendChild(newInput);
+    var lineBreak = document.createElement('br');
+    courseInfo.appendChild(lineBreak);
+    count++;
+}
+function displayCourses() {
+    let coursesListHTML = ''; 
+    for(let x = 0; x < courseInfo.children.length; x++) {
+        if(courseInfo.children[x].value){
+            coursesListHTML += `<li>${courseInfo.children[x].value}</li>`;
         }
-        resetBtn.style.display = 'none';
     }
-});
+    return coursesListHTML;
+}
+function instantiateDelete() {
+    if (!document.getElementById('deleteButton') && count >= 1) {
+        var deleteButton = document.createElement('input');
+        deleteButton.type = 'button';
+        deleteButton.id = 'deleteButton';
+        deleteButton.className = 'deleteButton';
+        deleteButton.value = 'Delete';
+        coursesButton.appendChild(deleteButton);
+        var spacing = document.createElement('br');
+        coursesButton.appendChild(spacing);
+
+        deleteButton.addEventListener("click", () => {
+            if (courseInfo.lastElementChild) {
+                courseInfo.removeChild(courseInfo.lastElementChild);
+                courseInfo.removeChild(courseInfo.lastElementChild);
+                count--; 
+                if (count === 0) {
+                    deleteButton.remove();
+                }
+            }
+        });
+    }    
+}
+
+

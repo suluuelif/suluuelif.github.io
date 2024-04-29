@@ -27,7 +27,7 @@ main {
 
 body, h1, h2, h3, p, nav{
     text-align: center;
-    font-family: ;
+   
  
  }
  .center{
@@ -78,24 +78,17 @@ form {
         max-width: 400px;
         margin: 20px auto;
     }
-input[type="text"], input[type="submit"] {
+input[type="text"], input[type="submit"], select {
         width: 100%;
         padding: 10px;
         margin: 5px 0;
-    }
-ul {
-        list-style-type: none;
-        padding: 0;
-    }
- li {
-        background: #b96f6f;
-        margin: 5px 0;
-        padding: 10px;
-        border-radius: 4px;
+        font-family: Marker Felt, fantasy;
+        color: #ad1d00;
     }
     label {
         display: block;
         margin-bottom: 5px;
         font-weight: bold;
         font-family: Marker Felt, fantasy;
+        color: #ad1d00;
     }
