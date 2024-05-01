@@ -6,33 +6,28 @@ document.getElementById("date").innerHTML = "Date : " + Date();
 
 
 function moodGreeting() {
-    // Prompt the user for their name
-    let userName = prompt("What's your name?");
-    
-    // Validate if the user entered a name
-    if (userName) {
-        // Prompt the user for their mood rating
-        let mood = prompt("How are you feeling today? (Rate it on a scale of 1-10)");
+    let userName = document.getElementById("userName").value.trim();
+    let moodRating = parseInt(document.getElementById("moodRating").value);
 
-        // Validate the mood rating
-        if (!isNaN(mood) && mood >= 1 && mood <= 10) {
-            let text;
-            if (mood <= 5) {
-                text = `Womp Womp ${userName}!`;
-            } else {
-                text = `You are feeling good, ${userName}!`;
-            }
-
-            // Display the greeting message
-            alert(`The {name of your company} welcomes you, ${userName}! ${text}`);
-        } else {
-            alert("Mood must be a number between 1 and 10.");
-        }
-    } else {
-        alert("Please enter your name.");
+    if (userName === "") {
+        document.getElementById("greetingMessage").innerHTML = "Please enter your name.";
+        return;
     }
-}
 
+    if (isNaN(moodRating) || moodRating < 1 || moodRating > 10) {
+        document.getElementById("greetingMessage").innerHTML = "Mood must be a number between 1 and 10.";
+        return;
+    }
+
+    let moodMessage;
+    if (moodRating <= 5) {
+        moodMessage = "Womp Womp";
+    } else {
+        moodMessage = "You are feeling good";
+    }
+
+    document.getElementById("greetingMessage").innerHTML = `The {name of your company} welcomes you, ${userName}!<br>We're glad you are doing ${moodMessage}!`;
+}
 // function getToKnow(){
 //     let user = document.getElementById("userName").value;
  
