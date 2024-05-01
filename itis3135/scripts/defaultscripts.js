@@ -26,34 +26,9 @@ function moodGreeting() {
         moodMessage = "You are feeling good";
     }
 
-    document.getElementById("greetingMessage").innerHTML = `The {name of your company} welcomes you, ${userName}!<br>We're glad you are doing ${moodMessage}!`;
+    document.getElementById("greetingMessage").innerHTML = `The Su Designs welcomes you, ${userName}!<br>We're glad you are doing ${moodMessage}!`;
 }
-// function getToKnow(){
-//     let user = document.getElementById("userName").value;
- 
-//     let output;
-//     if(typeof user === "string"){
-//         output = `Welcome, ${user}! We're glad you are doing well!`
-//     }else{
-//         output= "make sure you enter your name"
-//     }
-    
-// document.getElementById("greeting").innerHTML = output;
-// }
 
-// function moodRate(){
-//     let mood = document.getElementById("number").value;
-//     let text;
-//     if (isNaN(mood) || mood < 1 || mood > 10) {
-//        text =  "Mood Can't exceed 10";
-//       } else if (mood<= 5){
-//         text = `Womp Womp ${number}`;
-//       }else{
-//         text= `You are feeling ${number} out of 10 Nice to hear that`
-//       }
-//       document.getElementById("moodrating").innerHTML = text;
-
-//  } 
 
  document.getElementById("polygonForm").addEventListener("submit", function(event) {
     event.preventDefault(); 
