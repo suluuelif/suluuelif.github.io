@@ -1,0 +1,24 @@
+{
+    "footerLinks": [
+        {"name": "CLT Webspace", "url": "https://webpages.charlotte.edu/esu3/"},
+        {"name": "Github", "url": "https://github.com/suluuelif"},
+        {"name": "Github Course Page", "url": "https://suluuelif.github.io/itis3135"},
+        {"name": "freecodecamp", "url": "https://www.freecodecamp.org/suluelif"},
+        {"name": "codeacademy", "url": "https://www.codecademy.com/profiles/suluelif"},
+        {"name": "LinkedIn", "url": "https://www.linkedin.com/in/elif-su/"},
+        {"name": "Github.io", "url": "https://github.com/suluuelif/suluuelif.github.io"}
+    ],
+    "designedBy": {
+        "name": "Su Designs",
+        "website": "sudesigns.org/Su-Activity4.html",
+        "certifications": [
+            {"name": "Responsive Web Design", "url": "https://www.freecodecamp.org/certification/suluelif/responsive-web-design"},
+            {"name": "JavaScript Algorithms and Data Structures", "url": "https://www.freecodecamp.org/certification/suluelif/javascript-algorithms-and-data-structures-v8"}
+        ]
+    },
+    "validationLinks": [
+        {"type": "HTML", "url": "https://validator.w3.org/check?uri=referer", "image": "https://mytienhoang.github.io/itis3135/z_archives/html_validation.png"},
+        {"type": "CSS", "url": "https://jigsaw.w3.org/css-validator/check/referer", "image": "https://jigsaw.w3.org/css-validator/images/vcss"},
+        {"type": "Disability/Accessibility Design", "url": "https://wave.webaim.org/report#/https://webpages.charlotte.edu/esu3/itis3135/", "image": "images/button_validation_wcag-2.png"}
+    ]
+}

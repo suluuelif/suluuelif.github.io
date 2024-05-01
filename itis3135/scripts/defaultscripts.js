@@ -30,35 +30,51 @@ function getToKnow(){
       document.getElementById("moodrating").innerHTML = text;
 
  } 
+ document.getElementById("polygonForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevents form submission
+  
+    // Get the value entered by the user
+    let favoriteNumber = parseFloat(document.getElementById("favoriteNumber").value);
+  
+    // Ensure the number is between 0 and 10
+    favoriteNumber = Math.abs(Math.round(favoriteNumber)); // Converts negative numbers to positive and rounds decimals to nearest integer
+    favoriteNumber = Math.min(Math.max(favoriteNumber, 0), 10); // Clamps the number between 0 and 10
+  
+    // Array containing polygon names
+    const polygonNames = ["", "Monogon", "Digon", "Triangle", "Quadrilateral", "Pentagon", "Hexagon", "Heptagon", "Octagon", "Nonagon", "Decagon"];
+  
+    // Alert the name of the polygon based on the number of sides
+    alert("The name of the polygon with " + favoriteNumber + " sides is: " + polygonNames[favoriteNumber]);
+  });
 
  
 
     
- function findPolygon(){
-    let polygon = document.getElementById("favoriteNumber").value;
-    let text;
-    const Polygons = {
-        "monogon": 1,
-        "bigon": 2,
-        "triangle": 3,
-        "quadrilateral": 4,
-        "pentagon": 5,
-        "hexagon": 6,
-        "heptagon": 7,
-        "octagon": 8,
-        "ennagon": 9,
-        "decagon": 10,  
-    };
-    if(isNaN(polygon)){
-        text = "Make sure it is between 1-10"
-    }else if(polygon < 0 ){
-       text = Math.abs(polygon);
-    }else{
-        text = polygon;
-    }
+//  function findPolygon(){
+//     let polygon = document.getElementById("favoriteNumber").value;
+//     let text;
+//     const Polygons = {
+//         "monogon": 1,
+//         "bigon": 2,
+//         "triangle": 3,
+//         "quadrilateral": 4,
+//         "pentagon": 5,
+//         "hexagon": 6,
+//         "heptagon": 7,
+//         "octagon": 8,
+//         "ennagon": 9,
+//         "decagon": 10,  
+//     };
+//     if(isNaN(polygon)){
+//         text = "Make sure it is between 1-10"
+//     }else if(polygon < 0 ){
+//        text = Math.abs(polygon);
+//     }else{
+//         text = polygon;
+//     }
 
-    if (favoriteNumber.isInteger(text)) {
-        text = text.toFixed(0); 
-    }
-    document.getElementById("yourPolygon").innerHTML = text;
- }
+//     if (favoriteNumber.isInteger(text)) {
+//         text = text.toFixed(0); 
+//     }
+//     document.getElementById("yourPolygon").innerHTML = text;
+//  }
