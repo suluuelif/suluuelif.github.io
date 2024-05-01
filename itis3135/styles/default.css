@@ -97,7 +97,7 @@ label, legend{
 }
 a:visited{
     text-decoration: none;
-    decoration: none;
+    /* decoration: none; */
 }
 label {
     display: block;
