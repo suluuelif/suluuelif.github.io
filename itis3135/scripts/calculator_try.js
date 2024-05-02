@@ -1,32 +1,48 @@
-const calculator = document.querySelector(".calculator")
-const keys = calculator.querySelector(".calculator_keys")
-const key = e.target
-const action = key.dataset.action
+const buttons = document.querySelectorAll('.calculator-button');
+const input = document.getElementById('calculator-display-input');
+const output = document.getElementById('calculator-display-output');
+let firstNum = false
 
-keys.addEventListener("click", () => {
-    if (!action) {
-        console.log('number key!')
-      }
-     if (
-        action === 'add' ||
-        action === 'subtract' ||
-        action === 'multiply' ||
-        action === 'divide'
-      ) {
-        console.log('operator key!')
-      }
-      if (action === 'decimal') {
-        console.log('decimal key!')
-      }
-      
-      if (action === 'clear') {
-        console.log('clear key!')
-      }
-      
-      if (action === 'calculate') {
-        console.log('equal key!')
-      }
- 
-})
+buttons.forEach(button => {
+    button.addEventListener("click", ()=> {
+        const buttonValue = button.getAttribute('value');
+        
+        if(buttonValue === 'clear') {
+            input.innerText = "0";
+            output.innerText = "";
+            firstNum = false;
+            return;
+        }
 
- 
+        if(buttonValue === '=') {
+            output.innerText = calculate();
+            if(buttonValue === "+"||buttonValue === "-"||buttonValue === "*"||buttonValue === "/") {
+                input.innerText = output.innerText + "buttonValue";
+            } else if(buttonValue === "clear"){
+                input.innerText = "0";
+                output.innerText = "";
+            }
+            return;
+        }
+        
+        if(buttonValue === "+"||buttonValue === "-"||buttonValue === "*"||buttonValue === "/") {
+            if(!(output.innerText === "")) {
+                input.innerText = output.innerText;
+                output.innerText = "";
+            }
+        }
+        
+        if(!firstNum){
+            input.innerText = "";
+            input.innerText += buttonValue;
+            firstNum = true;
+        } else {
+            input.innerText += buttonValue;
+        }
+    });
+});
+
+function calculate() {
+    const equation = eval(input.innerText);
+    return equation;
+}
