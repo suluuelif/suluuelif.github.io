@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELIF SU's EERIE SEAL || ITIS 3135 || Homepage</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://farawayforests.com/cdn/accumulus/accumulus.min.js"></script>
+    <script src=""></script>
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <h2>#8 Arrays</h2> 
+        <input type="text" id="personName" placeholder="Name">
+<input type="text" id="salary" placeholder="Salary">
+<button onclick="addSalary()">Add Salary</button>
+
+<select id="selectPerson"></select>
+<input type="text" id="newSalary" placeholder="New Salary">
+<button onclick="modifySalary()">Modify Salary</button>
+
+<div id="results"></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Salary</th>
+    </tr>
+  </thead>
+  <tbody id="results_table_body">
+   
+  </tbody>
+</table>
+
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script>
+        document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+        document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+        document.getElementById("validation_link_disability").setAttribute("href","https://wave.webaim.org/report#/" + location.href);
+     </script>
+     <script src="scripts/HTMLInclude.min.js"></script>
+     <script src="scripts/arrays.js"></script>
+
+</body>
+</html>
