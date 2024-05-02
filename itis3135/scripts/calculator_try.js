@@ -1,48 +1,22 @@
-const buttons = document.querySelectorAll('.calculator-button');
-const input = document.getElementById('calculator-display-input');
-const output = document.getElementById('calculator-display-output');
-let firstNum = false
+let display = document.getElementById('display');
 
-buttons.forEach(button => {
-    button.addEventListener("click", ()=> {
-        const buttonValue = button.getAttribute('value');
-        
-        if(buttonValue === 'clear') {
-            input.innerText = "0";
-            output.innerText = "";
-            firstNum = false;
-            return;
-        }
+function appendToDisplay(value) {
+  display.value += value;
+}
 
-        if(buttonValue === '=') {
-            output.innerText = calculate();
-            if(buttonValue === "+"||buttonValue === "-"||buttonValue === "*"||buttonValue === "/") {
-                input.innerText = output.innerText + "buttonValue";
-            } else if(buttonValue === "clear"){
-                input.innerText = "0";
-                output.innerText = "";
-            }
-            return;
-        }
-        
-        if(buttonValue === "+"||buttonValue === "-"||buttonValue === "*"||buttonValue === "/") {
-            if(!(output.innerText === "")) {
-                input.innerText = output.innerText;
-                output.innerText = "";
-            }
-        }
-        
-        if(!firstNum){
-            input.innerText = "";
-            input.innerText += buttonValue;
-            firstNum = true;
-        } else {
-            input.innerText += buttonValue;
-        }
-    });
-});
+function clearDisplay() {
+  display.value = '';
+}
 
 function calculate() {
-    const equation = eval(input.innerText);
-    return equation;
+  try {
+    let result = eval(display.value);
+    if (isNaN(result) || !isFinite(result)) {
+      display.value = 'Error';
+    } else {
+      display.value = result;
+    }
+  } catch (error) {
+    display.value = 'Error';
+  }
 }
