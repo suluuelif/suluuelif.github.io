@@ -1,22 +1,58 @@
 let display = document.getElementById('display');
+let currentInput = '';
+let operator = '';
+let firstOperand = '';
 
-function appendToDisplay(value) {
-  display.value += value;
+function appendNumber(number) {
+  currentInput += number;
+  updateDisplay();
+}
+
+function appendOperator(op) {
+  if (currentInput !== '') {
+    operator = op;
+    firstOperand = currentInput;
+    currentInput = '';
+    updateDisplay();
+  }
+}
+
+function appendDecimal() {
+  if (!currentInput.includes('.')) {
+    currentInput += '.';
+    updateDisplay();
+  }
 }
 
 function clearDisplay() {
-  display.value = '';
+  currentInput = '';
+  operator = '';
+  firstOperand = '';
+  updateDisplay();
 }
 
 function calculate() {
-  try {
-    let result = eval(display.value);
-    if (isNaN(result) || !isFinite(result)) {
-      display.value = 'Error';
-    } else {
-      display.value = result;
-    }
-  } catch (error) {
-    display.value = 'Error';
+  let result;
+  const secondOperand = currentInput;
+  switch (operator) {
+    case '+':
+      result = parseFloat(firstOperand) + parseFloat(secondOperand);
+      break;
+    case '-':
+      result = parseFloat(firstOperand) - parseFloat(secondOperand);
+      break;
+    case '*':
+      result = parseFloat(firstOperand) * parseFloat(secondOperand);
+      break;
+    case '/':
+      result = parseFloat(firstOperand) / parseFloat(secondOperand);
+      break;
+    default:
+      return;
   }
+  display.value = result;
+}
+
+function updateDisplay() {
+  display.value = currentInput !== '' ? currentInput : '0';
 }
