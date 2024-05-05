@@ -92,3 +92,50 @@ input[type="text"], input[type="submit"], select {
         font-family: Marker Felt, fantasy;
         color: #ad1d00;
     }
+    a:visited{
+        text-decoration: none;
+        
+    }
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .section {
+        display: none;
+        margin-bottom: 20px;
+    }
+    
+    .section.active {
+        display: block;
+        border: 1px solid #ccc;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        cursor: pointer;
+    } 
+    ul li{
+        list-style-type: "🌷";
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: #5581ea;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+      }
+      th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ff0000;
+        color: #e40d0d;
+    }
+    th {
+        background-color: #ff0000;
+        color: #ffffff;
+    }
