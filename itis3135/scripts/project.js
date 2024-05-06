@@ -1,22 +1,21 @@
 
-// Member Form 
 document.getElementById('addMemberForm').addEventListener('submit', function(event) {
-    event.preventDefault(); 
+  event.preventDefault(); // Prevent form submission
 
-    
-    var firstName = document.getElementById('firstName').value;
-    var lastName = document.getElementById('lastName').value;
-    var grade = document.getElementById('grade').value;
+  // Get form values
+  var firstName = document.getElementById('firstName').value.trim();
+  var lastName = document.getElementById('lastName').value.trim();
+  var grade = document.getElementById('grade').value;
 
-    
-    var li = document.createElement('li');
-    li.textContent = 'Name: ' + firstName + ' ' + lastName + ', Grade: ' + grade;
+  // Create entry with form values and <br> element
+  var entry = `${firstName} ${lastName} - ${grade}<br>`;
 
-  
-    document.getElementById('memberList').appendChild(li);
+  // Supposedly adds to the list but I just cannot get this to work
+  var memberList = document.getElementById('memberList');
+  memberList.innerHTML += entry;
 
- 
-    document.getElementById('firstName').value = '';
-    document.getElementById('lastName').value = '';
-    document.getElementById('grade').value = '';
+  // Clears the form
+  document.getElementById('firstName').value = '';
+  document.getElementById('lastName').value = '';
+  document.getElementById('grade').selectedIndex = 0; 
 });
