@@ -141,8 +141,13 @@ input[type="text"], input[type="submit"], select {
     }
     #memberList {
         margin-top: 10px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: #5581ea;
+
       }
-      #memberList div {
+      #memberList {
         margin-bottom: 5px; 
         line-height: 1.5; 
       }      
+
+      

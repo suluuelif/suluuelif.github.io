@@ -14,29 +14,12 @@
     </header>
     <main>
        <h2>Sign-Up Here</h2>
-       <form id="addMemberForm">
-        <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" required>
-    
-        <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" name="lastName" required>
-    
-        <label for="grade">Grade:</label>
-        <select id="grade" name="grade" required>
-            <option value="">Select Grade</option>
-            <option value="Freshman">Freshman</option>
-            <option value="Sophomore">Sophomore</option>
-            <option value="Junior">Junior</option>
-            <option value="Senior">Senior</option>
-        </select>
-    
-        <input type="submit" value="Add Member">
-    </form>
 
-    
-    <h2>Our Club Members</h2> 
-    <div id="memberList"></div>
-    
+       <input type="text" id="memberName" placeholder="John Doe">
+  <button onclick="addItem()">Add</button>
+
+  <ul id="memberList"></ul>
+       
      
         
     
