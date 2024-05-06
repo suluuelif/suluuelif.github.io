@@ -1,13 +1,13 @@
 
 document.getElementById('addMemberForm').addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent form submission
+  event.preventDefault(); 
 
   // Get form values
   var firstName = document.getElementById('firstName').value.trim();
   var lastName = document.getElementById('lastName').value.trim();
   var grade = document.getElementById('grade').value;
 
-  // Create entry with form values and <br> element
+  // Adds a br for input to be entered
   var entry = `${firstName} ${lastName} - ${grade}<br>`;
 
   // Supposedly adds to the list but I just cannot get this to work

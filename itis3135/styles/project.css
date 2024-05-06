@@ -139,3 +139,10 @@ input[type="text"], input[type="submit"], select {
         background-color: #ff0000;
         color: #ffffff;
     }
+    #memberList {
+        margin-top: 10px;
+      }
+      #memberList div {
+        margin-bottom: 5px; 
+        line-height: 1.5; 
+      }      
