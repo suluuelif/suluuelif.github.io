@@ -164,5 +164,8 @@ figcaption{
     display: grid; 
     /* other necessary CSS */ 
   }
-  
+  nav a{
+    text-decoration: none;
+    
+} 
   

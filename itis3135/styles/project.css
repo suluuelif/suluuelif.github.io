@@ -150,4 +150,36 @@ input[type="text"], input[type="submit"], select {
         line-height: 1.5; 
       }      
 
-      
+.prev,
+.next {
+  cursor: pointer;
+}
+
+
+.prev {
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 1px 3px;
+    border: .5px solid #ffffff;
+    border-radius: 3px;
+}
+
+.next {
+  background-color: #ff0000;
+  color: #ffffff;
+  padding: 1px 3px;
+  border: .5px solid #ffffff;
+  border-radius: 3px;
+}
+
+.nav-link {
+  color: rgb(128, 43, 43); /* Set text color of links to white */
+  text-decoration: none; /* Remove default underline */
+  margin-right: 10px; /* Add spacing between links */
+  
+}
+
+nav a{
+    text-decoration: none;
+    
+}
